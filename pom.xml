@@ -32,9 +32,9 @@
 	</dependencies>
 
 	<scm>
-		<connection>scm:git:git://github.com/julienpoirier/viewpoint-utils.git</connection>
-		<developerConnection>scm:git:git@github.com:julienpoirier/viewpoint-utils.git</developerConnection>
-		<url>https://github.com/julienpoirier/viewpoint-utils</url>
+		<connection>scm:git:git://github.com/julienpoirier/viewpoint-connector-java.git</connection>
+		<developerConnection>scm:git:git@github.com:julienpoirier/viewpoint-connector-java.git</developerConnection>
+		<url>https://github.com/julienpoirier/viewpoint-connector-java</url>
 	</scm>
 
 	<build>
