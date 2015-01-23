@@ -258,6 +258,7 @@ public class LiveStorageImpl implements Storage {
         private Indicator event;
         private String project;
         private String appVersion;
+        private String server;
 
         public WrapperData() {
             super();
@@ -333,6 +334,21 @@ public class LiveStorageImpl implements Storage {
          */
         public void setProject(String project) {
             this.project = project;
+        }
+
+        /**
+         * @return the server
+         */
+        public String getServer() {
+            return server;
+        }
+
+        /**
+         * @param server
+         *            the server to set
+         */
+        public void setServer(String server) {
+            this.server = server;
         }
 
         /*

@@ -141,7 +141,7 @@ public class WebcareLiveStorageImplTest {
 		log.error(result.get(0).toString());
 		Assert.assertEquals(
 				"store indicator",
-				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id5\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null}",
+				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id5\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
 				result.get(0).toString());
 		result.clear();
 
@@ -150,7 +150,7 @@ public class WebcareLiveStorageImplTest {
 		Assert.assertEquals(1, result.size());
 		Assert.assertEquals(
 				"store indicator with userid",
-				"{\"userAgent\":null,\"userId\":\"jacques\",\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null}",
+				"{\"userAgent\":null,\"userId\":\"jacques\",\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
 				result.get(0).toString());
 		result.clear();
 
@@ -162,7 +162,7 @@ public class WebcareLiveStorageImplTest {
 		Assert.assertEquals(1, result.size());
 		Assert.assertEquals(
 				"store list",
-				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"},{\"type\":\"COUNT\",\"name\":\"id2\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null}",
+				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"},{\"type\":\"COUNT\",\"name\":\"id2\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
 				result.get(0).toString());
 		result.clear();
 
@@ -171,7 +171,7 @@ public class WebcareLiveStorageImplTest {
 		Assert.assertEquals(1, result.size());
 		Assert.assertEquals(
 				"store list with userid",
-				"{\"userAgent\":null,\"userId\":\"bobo\",\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"},{\"type\":\"COUNT\",\"name\":\"id2\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null}",
+				"{\"userAgent\":null,\"userId\":\"bobo\",\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"},{\"type\":\"COUNT\",\"name\":\"id2\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
 				result.get(0).toString());
 		result.clear();
 
@@ -189,7 +189,7 @@ public class WebcareLiveStorageImplTest {
 		Assert.assertEquals(1, result.size());
 		Assert.assertEquals(
 				"store list with userid",
-				"{\"userAgent\":\"USERAGENT\",\"userId\":\"bobo\",\"referer\":\"http://referer\",\"uri\":\"http://uri\",\"requestId\":\"REQUESTID\",\"sessionId\":\"SESSIONID\",\"ip\":\"192.168.0.1\",\"method\":\"GET\",\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"},{\"type\":\"COUNT\",\"name\":\"id2\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null}",
+				"{\"userAgent\":\"USERAGENT\",\"userId\":\"bobo\",\"referer\":\"http://referer\",\"uri\":\"http://uri\",\"requestId\":\"REQUESTID\",\"sessionId\":\"SESSIONID\",\"ip\":\"192.168.0.1\",\"method\":\"GET\",\"events\":[{\"type\":\"COUNT\",\"name\":\"id1\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"},{\"type\":\"COUNT\",\"name\":\"id2\",\"date\":null,\"timestamp\":null,\"msg\":null,\"detail\":null,\"value\":1.0,\"complexValue\":null,\"isOk\":true,\"errorType\":\"SUCCESS\"}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
 				result.get(0).toString());
 
 		// with nothing

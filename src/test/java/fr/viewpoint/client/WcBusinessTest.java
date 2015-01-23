@@ -136,7 +136,7 @@ public class WcBusinessTest {
 
 		Assert.assertEquals(1, result.size());
 		Assert.assertEquals(
-				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"BUSINESS\",\"name\":\"ORDER\",\"date\":983585045,\"timestamp\":983585045000,\"origin\":\"FROM_ST\",\"orderId\":1,\"customerId\":\"root1\",\"orderCreationDate\":983585045000}],\"event\":null,\"project\":\"project\",\"appVersion\":null}",
+				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"BUSINESS\",\"name\":\"ORDER\",\"date\":983585045,\"timestamp\":983585045000,\"origin\":\"FROM_ST\",\"orderId\":1,\"customerId\":\"root1\",\"orderCreationDate\":983585045000}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
 				result.get(0));
 	}
 
