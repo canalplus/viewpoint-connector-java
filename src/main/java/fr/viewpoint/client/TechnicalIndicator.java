@@ -2,8 +2,7 @@ package fr.viewpoint.client;
 
 import java.util.Date;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import fr.viewpoint.client.complex.Complex;
 
 /**

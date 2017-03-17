@@ -2,8 +2,7 @@ package fr.viewpoint.client.storage.impl;
 
 import java.io.IOException;
 
-import org.codehaus.jackson.map.ObjectMapper;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.viewpoint.client.storage.impl.LiveStorageImpl.WrapperData;
 
 public class StringStorageUtils {
