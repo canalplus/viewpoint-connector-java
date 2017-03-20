@@ -1,13 +1,11 @@
 package fr.viewpoint.client;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import fr.viewpoint.client.Configuration;
-import fr.viewpoint.client.StorageFactory;
 import fr.viewpoint.client.StorageFactory.StorageType;
 import fr.viewpoint.client.storage.Storage;
 import fr.viewpoint.client.storage.impl.DevNullStorageImpl;

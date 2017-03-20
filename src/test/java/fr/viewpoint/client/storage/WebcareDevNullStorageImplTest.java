@@ -3,7 +3,7 @@ package fr.viewpoint.client.storage;
 import java.util.ArrayList;
 import java.util.List;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.junit.Test;
 
@@ -11,8 +11,6 @@ import fr.viewpoint.client.Configuration;
 import fr.viewpoint.client.Indicator;
 import fr.viewpoint.client.IndicatorType;
 import fr.viewpoint.client.Value;
-import fr.viewpoint.client.storage.Storage;
-import fr.viewpoint.client.storage.StorageException;
 import fr.viewpoint.client.storage.impl.DevNullStorageImpl;
 
 public class WebcareDevNullStorageImplTest {

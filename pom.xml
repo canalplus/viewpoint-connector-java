@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>viewpoint-connector-java</artifactId>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.5</version>
 	<packaging>jar</packaging>
 
 	<name>viewpoint-connector-java</name>
@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>fr.viewpoint</groupId>
 		<artifactId>viewpoint-parent</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,18 +27,51 @@
 		<dependency>
 			<groupId>fr.viewpoint</groupId>
 			<artifactId>viewpoint-utils</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
 	</dependencies>
 
 	<scm>
-		<connection>scm:git:git://github.com/julienpoirier/viewpoint-connector-java.git</connection>
-		<developerConnection>scm:git:git@github.com:julienpoirier/viewpoint-connector-java.git</developerConnection>
-		<url>https://github.com/julienpoirier/viewpoint-connector-java</url>
+		<connection>scm:git:git://github.com/canalplus/viewpoint-connector-java.git</connection>
+		<developerConnection>scm:git:git@github.com:canalplus/viewpoint-connector-java.git</developerConnection>
+		<url>https://github.com/canalplus/viewpoint-connector-java</url>
 	</scm>
+
+	<distributionManagement>
+        	<repository>
+			<id>ext-release-local</id>
+			<name>ext-release-local</name>
+			<url>http://ec2-54-171-204-66.eu-west-1.compute.amazonaws.com/artifactory/ext-release-local</url>
+		</repository>
+	        <snapshotRepository>
+        	    <id>ext-snapshot-local</id>
+	            <name>ext-snapshot-local</name>
+	            <url>http://ec2-54-171-204-66.eu-west-1.compute.amazonaws.com/artifactory/ext-snapshot-local</url>
+        	    <uniqueVersion>true</uniqueVersion>
+	        </snapshotRepository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
+	            <plugin>
+        	        <groupId>external.atlassian.jgitflow</groupId>
+                	<artifactId>jgitflow-maven-plugin</artifactId>
+	                <version>1.0-m5.1</version>
+        	        <configuration>
+                	    	<allowSnapshots>true</allowSnapshots>
+	                    	<flowInitContext>
+        	                	<masterBranchName>master</masterBranchName>
+	                        	<developBranchName>develop</developBranchName>
+	                        	<featureBranchPrefix>feature/</featureBranchPrefix>
+        	                	<releaseBranchPrefix>release/</releaseBranchPrefix>
+                	        	<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+	                        	<versionTagPrefix>v</versionTagPrefix>
+        	       		</flowInitContext>
+	                    	<autoVersionSubmodules>true</autoVersionSubmodules>
+        	            	<pushReleases>true</pushReleases>
+                		<pushHotfixes>true</pushHotfixes>
+	        	</configuration>
+	        	</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

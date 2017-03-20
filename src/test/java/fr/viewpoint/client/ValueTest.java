@@ -1,15 +1,10 @@
 package fr.viewpoint.client;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.viewpoint.client.IndicatorErrorType;
-import fr.viewpoint.client.IndicatorType;
-import fr.viewpoint.client.StorageFactory;
-import fr.viewpoint.client.TechnicalIndicator;
-import fr.viewpoint.client.Value;
 import fr.viewpoint.client.complex.NodeHB;
 
 public class ValueTest {
