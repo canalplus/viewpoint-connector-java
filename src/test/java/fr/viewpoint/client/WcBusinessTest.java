@@ -1,10 +1,12 @@
 package fr.viewpoint.client;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.text.SimpleDateFormat;
 
 import mockit.Deencapsulation;
 import mockit.Mock;
@@ -83,7 +85,7 @@ public class WcBusinessTest {
 	}
 
 	@Test
-	public void testConstructors() {
+	public void testConstructors() throws ParseException {
 
 		Configuration config = new Configuration();
 		config.setLiveExchangeName("test");
@@ -125,19 +127,19 @@ public class WcBusinessTest {
 			}
 		};
 
-		Calendar cal = Calendar.getInstance();
-		cal.set(2001, 2, 3, 3, 4, 5);
-		cal.set(Calendar.MILLISECOND, 0);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss:S");
+		String dateInString = "03-02-2001 03:04:05:0";
+		Date date = sdf.parse(dateInString);
 
-		MyBusiness myB = new MyBusiness("FROM_ST", "ORDER", cal.getTime(), 1,
-				"root1", cal.getTime());
+		MyBusiness myB = new MyBusiness("FROM_ST", "ORDER", date, 1, "root1", date);
 
 		storage.store(myB);
 
 		Assert.assertEquals(1, result.size());
 		Assert.assertEquals(
-				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"BUSINESS\",\"name\":\"ORDER\",\"date\":983585045,\"timestamp\":983585045000,\"origin\":\"FROM_ST\",\"orderId\":1,\"customerId\":\"root1\",\"orderCreationDate\":983585045000}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
+				"{\"userAgent\":null,\"userId\":null,\"referer\":null,\"uri\":null,\"requestId\":null,\"sessionId\":null,\"ip\":null,\"method\":null,\"events\":[{\"type\":\"BUSINESS\",\"name\":\"ORDER\",\"date\":981165845,\"timestamp\":981165845000,\"origin\":\"FROM_ST\",\"orderId\":1,\"customerId\":\"root1\",\"orderCreationDate\":981165845000}],\"event\":null,\"project\":\"project\",\"appVersion\":null,\"server\":null}",
 				result.get(0));
+
 	}
 
 }
